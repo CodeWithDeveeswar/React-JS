@@ -70,11 +70,12 @@ main ul {
   list-style: none;
 }
 
-main .item svg {
-  color: rgb(114, 114, 202);
+main .item #edit {
+  color: rgb(125, 141, 37);
   outline: none;
 }
 
-main .item svg:hover {
+main .item #delete {
   color: rgb(255, 45, 45);
+  outline: none;
 }

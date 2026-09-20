@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FaTrashCan } from "react-icons/fa6";
 import { FaEdit } from "react-icons/fa";
+import { IoSaveSharp } from "react-icons/io5";
+import { IoAddCircle } from "react-icons/io5";
 
 const Content = () => {
   let [items, setItems] = useState([
@@ -10,8 +12,8 @@ const Content = () => {
   ]);
 
   let [newItem, setNewItem] = useState("");
-
   let [isEditing, setIsEditing] = useState(false);
+  let [currentEleID, setCurrentEleID] = useState(null);
 
   let handleChecked = (id) => {
     let newListItems = items.map((item) => {
@@ -22,14 +24,28 @@ const Content = () => {
   };
 
   let handleAddOrSaveItem = () => {
-    setItems([
-      ...items,
-      { id: items.length + 1, label: newItem, checked: false },
-    ]);
+    if (isEditing) {
+      let newListItems = items.map((item) => {
+        return item.id === currentEleID ? { ...item, label: newItem } : item;
+      });
+      setItems(newListItems);
+      setCurrentEleID(null);
+      setNewItem("");
+      setIsEditing(false);
+    } else {
+      setItems([
+        ...items,
+        { id: items.length + 1, label: newItem, checked: false },
+      ]);
+      setNewItem("");
+    }
   };
 
-  let handleUpdate = () => {
+  let handleUpdate = (id) => {
+    let listItem = items.find((item) => item.id === id);
+    setNewItem(listItem.label);
     setIsEditing(true);
+    setCurrentEleID(id);
   };
 
   let handleDelete = (id) => {
@@ -54,7 +70,11 @@ const Content = () => {
           }}
         />
         <button onClick={handleAddOrSaveItem}>
-          {isEditing ? "Save" : "Add"}
+          {isEditing ? (
+            <IoSaveSharp color="green" />
+          ) : (
+            <IoAddCircle color="blue" />
+          )}
         </button>
       </div>
       <ul>
@@ -66,9 +86,18 @@ const Content = () => {
                 checked={item.checked}
                 onChange={() => handleChecked(item.id)}
               />
+
               <label>{item.label}</label>
-              <FaEdit role="button" tabIndex={0} onClick={handleUpdate} />
+
+              <FaEdit
+                id="edit"
+                role="button"
+                tabIndex={0}
+                onClick={() => handleUpdate(item.id)}
+              />
+
               <FaTrashCan
+                id="delete"
                 role="button"
                 tabIndex={0}
                 onClick={() => {
