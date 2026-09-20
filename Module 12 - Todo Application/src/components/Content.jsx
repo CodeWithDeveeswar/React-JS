@@ -4,9 +4,9 @@ import { FaEdit } from "react-icons/fa";
 
 const Content = () => {
   let [items, setItems] = useState([
-    { id: 1, label: " HTML & CSS ", checked: true },
-    { id: 2, label: " JavaScript ", checked: true },
-    { id: 3, label: " React JS ", checked: false },
+    { id: 1, label: "HTML & CSS", checked: true },
+    { id: 2, label: "JavaScript", checked: true },
+    { id: 3, label: "React JS", checked: false },
   ]);
 
   let [newItem, setNewItem] = useState("");
