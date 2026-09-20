@@ -3,9 +3,9 @@ import { FaTrashCan } from "react-icons/fa6";
 
 const Content = () => {
   let [items, setItems] = useState([
-    { id: 1, label: " HTML & CSS ", checked: true },
-    { id: 2, label: " JavaScript ", checked: true },
-    { id: 3, label: " React JS ", checked: false },
+    { id: 1, label: "HTML & CSS", checked: true },
+    { id: 2, label: "JavaScript", checked: true },
+    { id: 3, label: "React JS", checked: false },
   ]);
 
   return (
