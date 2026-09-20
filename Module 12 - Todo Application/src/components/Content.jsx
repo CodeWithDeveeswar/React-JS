@@ -69,6 +69,7 @@ const Content = () => {
             setNewItem(e.target.value);
           }}
         />
+
         <button onClick={handleAddOrSaveItem}>
           {isEditing ? (
             <IoSaveSharp color="green" />
@@ -77,6 +78,7 @@ const Content = () => {
           )}
         </button>
       </div>
+
       <ul>
         {items.map((item) => {
           return (
