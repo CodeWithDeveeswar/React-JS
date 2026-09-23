@@ -10,9 +10,14 @@ function useFetch(url) {
     let fetchApi = async () => {
       try {
         // let response = await fetch(url);
+        // if (response.ok) {
+        //   let data = await response.json();
 
+        //   setProducts(data);
+        // } else {
+        //   throw new Error("Data Not Found");
+        // }
         let response = await axios.get(url);
-
         setProducts(response.data);
       } catch (error) {
         setError(error.message);
@@ -23,7 +28,6 @@ function useFetch(url) {
     fetchApi();
   }, []);
 
-  return { products, error, isLoading };
+  return { products, error, isLoading, setProducts };
 }
-
 export default useFetch;
