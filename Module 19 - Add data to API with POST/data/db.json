@@ -241,28 +241,16 @@
       }
     },
     {
-      "title": "Samsung S20 FE",
+      "title": "Samsung S20",
       "price": 500,
       "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-      "category": "Android Mobile ",
-      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-      "rating": {
-        "rate": "55000",
-        "count": "5"
-      },
-      "id": "TljKrFkjzAU"
-    },
-    {
-      "title": "Samsung 7",
-      "price": 500,
-      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-      "category": "Mobile Accessories",
-      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "category": "Smart Phone",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
       "rating": {
         "rate": "7.5",
         "count": "150"
       },
-      "id": "aS-Bx0G8rv8"
+      "id": "V6LoUKEgVgw"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -5,11 +5,11 @@ import ProductList from "./components/ProductList";
 import Products from "./components/Products";
 import SignUp from "./components/SignUp";
 import TodoApp from "./components/TodoApp";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import NewProduct from "./components/NewProduct";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./components/NavBar";
 import NotFound from "./components/NotFound";
-import NewProduct from "./components/NewProduct";
 
 const App = () => {
   return (

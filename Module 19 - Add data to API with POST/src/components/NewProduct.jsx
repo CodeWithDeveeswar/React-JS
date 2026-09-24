@@ -1,5 +1,5 @@
+import { Grid, Paper, TextField, Typography, Button } from "@mui/material";
 import { useState } from "react";
-import { Button, Grid, Paper, TextField, Typography } from "@mui/material";
 
 const NewProduct = () => {
   let paperStyle = {
@@ -8,13 +8,28 @@ const NewProduct = () => {
     padding: "20px",
   };
 
+  /*
+  {
+    "id": 1,
+    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    "price": 109.95,
+    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
+    "rating": {
+      "rate": 3.9,
+      "count": 120
+    }
+  }
+  */
+
   let [newProduct, setNewProduct] = useState({
     title: "",
     price: 500,
     description:
       "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
     category: "",
-    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
     rating: {
       rate: 0,
       count: 0,
@@ -59,7 +74,7 @@ const NewProduct = () => {
         description:
           "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
         category: "",
-        image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+        image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
         rating: {
           rate: 0,
           count: 0,
@@ -70,7 +85,7 @@ const NewProduct = () => {
 
   return (
     <Paper elevation={20} style={paperStyle}>
-      <Typography variant="h5" style={{ textAlign: "center", margin: "10x 0" }}>
+      <Typography variant="h5" align="center">
         Create New Product
       </Typography>
       <Grid
